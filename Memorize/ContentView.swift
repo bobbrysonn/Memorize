@@ -9,16 +9,47 @@ import SwiftUI
 
 struct ContentView: View
 {
+    @State var cardCount: Int = 3
+    let emojis: [String] = ["👻", "🎃", "🕷️", "😈", "💀", "🕸️", "🧙‍♀️", "🙀", "👹", "😱", "☠️", "🍭", "👺", "👿", "😳"]
+    let maxCardCount: Int = 15
+    
     var body: some View
     {
-        HStack
-        {
-            CardView()
-            CardView()
-            CardView()
-            CardView()
+        VStack {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]) {
+                    ForEach(0..<cardCount, id: \.self) { index in
+                        CardView(emojis[index])
+                            .aspectRatio(contentMode: .fit)
+                    }
+                }
+                .foregroundColor(.orange)
+                 
+            }
+            
+            // Spacer
+            Spacer()
+            
+            // Buttons
+            HStack {
+                // Add button
+                Button("Add card") {
+                    cardCount += 1
+                }
+                .disabled(cardCount + 1 > maxCardCount)
+                
+                // Reset button
+                Button("Reset") {
+                    cardCount = 3
+                }
+                
+                // Remove button
+                Button("Remove card") {
+                    cardCount -= 1
+                }
+                .disabled(cardCount - 1 < 3)
+            }
         }
-        .foregroundColor(.orange)
         .padding()
     }
 }
@@ -26,6 +57,12 @@ struct ContentView: View
 struct CardView: View
 {
     @State var isFaceUp: Bool = false
+    let content: String
+    
+    init(_ content: String, isFaceUp: Bool = false) {
+        self.content = content
+        self.isFaceUp = isFaceUp
+    }
     
     var body: some View
     {
@@ -33,17 +70,14 @@ struct CardView: View
         {
             let base: RoundedRectangle = RoundedRectangle(cornerRadius: 12)
             
-            if (isFaceUp)
-            {
+            Group {
                 base.fill(.white)
                 base.strokeBorder(lineWidth: 2)
-                Text("👻")
-                    .font(.largeTitle)
+                Text(content).font(.largeTitle)
             }
-            else
-            {
-                base.fill()
-            }
+            .opacity(isFaceUp ? 1 : 0)
+            
+            base.fill().opacity(isFaceUp ? 0 : 1)
         }
         .onTapGesture {
             isFaceUp.toggle()
