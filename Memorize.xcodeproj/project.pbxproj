@@ -11,7 +11,7 @@
 		3D5DF7832A9B90000014A480 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5DF7822A9B90000014A480 /* ContentView.swift */; };
 		3D5DF7852A9B90010014A480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5DF7842A9B90010014A480 /* Assets.xcassets */; };
 		3D5DF7882A9B90010014A480 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5DF7872A9B90010014A480 /* Preview Assets.xcassets */; };
-		3DF0D23F2AA1FA4000470E8F /* MemorizeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0D23E2AA1FA4000470E8F /* MemorizeGame.swift */; };
+		3DF0D23F2AA1FA4000470E8F /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0D23E2AA1FA4000470E8F /* MemoryGame.swift */; };
 		3DF0D2412AA201BE00470E8F /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0D2402AA201BE00470E8F /* EmojiMemoryGame.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +21,7 @@
 		3D5DF7822A9B90000014A480 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D5DF7842A9B90010014A480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D5DF7872A9B90010014A480 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3DF0D23E2AA1FA4000470E8F /* MemorizeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGame.swift; sourceTree = "<group>"; };
+		3DF0D23E2AA1FA4000470E8F /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		3DF0D2402AA201BE00470E8F /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,7 @@
 				3D5DF7822A9B90000014A480 /* ContentView.swift */,
 				3DF0D2402AA201BE00470E8F /* EmojiMemoryGame.swift */,
 				3D5DF7802A9B90000014A480 /* MemorizeApp.swift */,
-				3DF0D23E2AA1FA4000470E8F /* MemorizeGame.swift */,
+				3DF0D23E2AA1FA4000470E8F /* MemoryGame.swift */,
 				3D5DF7842A9B90010014A480 /* Assets.xcassets */,
 				3D5DF7862A9B90010014A480 /* Preview Content */,
 			);
@@ -145,7 +145,7 @@
 			files = (
 				3D5DF7832A9B90000014A480 /* ContentView.swift in Sources */,
 				3D5DF7812A9B90000014A480 /* MemorizeApp.swift in Sources */,
-				3DF0D23F2AA1FA4000470E8F /* MemorizeGame.swift in Sources */,
+				3DF0D23F2AA1FA4000470E8F /* MemoryGame.swift in Sources */,
 				3DF0D2412AA201BE00470E8F /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
